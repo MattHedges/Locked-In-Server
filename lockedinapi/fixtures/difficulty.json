@@ -1,0 +1,23 @@
+[
+    {
+        "model": "lockedinapi.difficulty",
+        "pk": 1,
+        "fields": {
+            "description": "Beginner"
+        }
+    },
+    {
+        "model": "lockedinapi.difficulty",
+        "pk": 2,
+        "fields": {
+            "description": "Intermediate"
+        }
+    },
+    {
+        "model": "lockedinapi.difficulty",
+        "pk": 3,
+        "fields": {
+            "description": "Advanced"
+        }
+    }
+]

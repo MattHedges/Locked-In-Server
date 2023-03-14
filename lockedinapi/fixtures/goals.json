@@ -1,0 +1,12 @@
+[
+    {
+        "model": "lockedinapi.goal",
+        "pk": 1,
+        "fields": {
+            "currentWeight": 255,
+            "goalWeight": 240,
+            "user": 1,
+            "timeframe": "2023-05-24"
+        }
+    }
+]

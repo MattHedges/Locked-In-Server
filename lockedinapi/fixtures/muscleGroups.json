@@ -1,0 +1,93 @@
+[
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 1,
+        "fields": {
+            "muscle": "Abdominals"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 2,
+        "fields": {
+            "muscle": "Obliques"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 3,
+        "fields": {
+            "muscle": "Forearms"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 4,
+        "fields": {
+            "muscle": "Biceps"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 5,
+        "fields": {
+            "muscle": "Shoulders"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 6,
+        "fields": {
+            "muscle": "Traps"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 7,
+        "fields": {
+            "muscle": "Chest"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 8,
+        "fields": {
+            "muscle": "Quadriceps"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 9,
+        "fields": {
+            "muscle": "Calves"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 10,
+        "fields": {
+            "muscle": "Hamstrings"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 11,
+        "fields": {
+            "muscle": "Glutes"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 12,
+        "fields": {
+            "muscle": "Triceps"
+        }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 13,
+        "fields": {
+            "muscle": "Lats"
+        }
+    }
+]

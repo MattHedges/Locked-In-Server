@@ -1,0 +1,11 @@
+[
+    {
+        "model": "lockedinapi.routine",
+        "pk": 1,
+        "fields": {
+            "name": "Legs",
+            "user": 1,
+            "exerciseRoutine": 1
+        }
+    }
+]
