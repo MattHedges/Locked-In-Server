@@ -16,7 +16,7 @@
         "pk": 2,
         "fields": {
             "name": "Barbell Curls",
-            "description": "While holding the upper arms stationary, curl the weights forward while contracting the biceps as you breathe out. 2.Continue the movement until your biceps are fully contracted and the bar is at shoulder level. 3. Hold the contracted position for a second and squeeze the biceps hard. 4. Slowly bring the weight back down to the starting position.",
+            "description": "1. While holding the upper arms stationary, curl the weights forward while contracting the biceps as you breathe out. 2.Continue the movement until your biceps are fully contracted and the bar is at shoulder level. 3. Hold the contracted position for a second and squeeze the biceps hard. 4. Slowly bring the weight back down to the starting position.",
             "difficulty": 1,
             "muscleGroup": 4,
             "equipment": 2,

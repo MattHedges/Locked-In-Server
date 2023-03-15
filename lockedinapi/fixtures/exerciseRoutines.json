@@ -1,0 +1,50 @@
+[
+    {
+        "model": "lockedinapi.exerciseRoutine",
+        "pk": 1,
+        "fields": {
+            "exercise": 4,
+            "routine": 1
+        }
+    },
+    {
+        "model": "lockedinapi.exerciseRoutine",
+        "pk": 2,
+        "fields": {
+            "exercise": 5,
+            "routine": 1
+        }
+    },
+    {
+        "model": "lockedinapi.exerciseRoutine",
+        "pk": 3,
+        "fields": {
+            "exercise": 8,
+            "routine": 1
+        }
+    },
+    {
+        "model": "lockedinapi.exerciseRoutine",
+        "pk": 4,
+        "fields": {
+            "exercise": 12,
+            "routine": 1
+        }
+    },
+    {
+        "model": "lockedinapi.exerciseRoutine",
+        "pk": 5,
+        "fields": {
+            "exercise": 22,
+            "routine": 1
+        }
+    },
+    {
+        "model": "lockedinapi.exerciseRoutine",
+        "pk": 6,
+        "fields": {
+            "exercise": 23,
+            "routine": 1
+        }
+    }
+]
