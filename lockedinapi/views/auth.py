@@ -25,7 +25,8 @@ def login_user(request):
         token = Token.objects.get(user=authenticated_user)
         data = {
             'valid': True,
-            'token': token.key
+            'token': token.key,
+            'user': token.user.id
         }
         return Response(data)
     else:
@@ -48,12 +49,13 @@ def register_user(request):
         username=request.data['username'],
         password=request.data['password'],
         first_name=request.data['first_name'],
-        last_name=request.data['last_name']
+        last_name=request.data['last_name'],
+        email=request.data['email']
     )
 
 
     # Use the REST Framework's token generator on the new user account
-    token = Token.objects.create(new_user)
+    token = Token.objects.create(user=new_user)
     # Return the token to the client
     data = { 'token': token.key }
     return Response(data)

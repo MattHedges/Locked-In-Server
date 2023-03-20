@@ -4,7 +4,8 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from lockedinapi.models import Routine, ExerciseRoutine, Exercise
 from rest_framework.decorators import action
-from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+
 
 
 
@@ -18,7 +19,7 @@ class RoutineView(ViewSet):
 
     def create(self, request):
         # Get the user instance from the request
-        user = get_user_model().objects.get(pk=request.user.pk)
+        user = User.objects.get(id=request.data["user"])
 
         routine = Routine.objects.create(
             name=request.data["name"],
@@ -47,6 +48,7 @@ class RoutineView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
     def list(self, request):
+
         routine = Routine.objects.all()
         serializer = RoutineSerializer(routine, many=True)
         return Response(serializer.data)
@@ -56,11 +58,25 @@ class RoutineView(ViewSet):
         routine = Routine.objects.get(pk=pk)
         routine.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+class ExerciseSerializer(serializers.ModelSerializer):
+    """JSON serializer for exercise
+    """
+    class Meta:
+        model = Exercise
+        fields = ('id', 'name', 'description', 'difficulty', 'muscleGroup', 'equipment', 'video', )
+
+class ExerciseRoutineSerializer(serializers.ModelSerializer):
+    exercise = ExerciseSerializer(many=False)
+
+    class Meta:
+        model = ExerciseRoutine
+        fields = ('exercise', )
 
 
 class RoutineSerializer(serializers.ModelSerializer):
-
+    exercise_routine = ExerciseRoutineSerializer(many = True)
     class Meta:
         model = Routine
-        fields = ('id','name', 'user', 'exerciseRoutine')
+        fields = ('id','name', 'user', 'exercise_routine', )
         depth = 1

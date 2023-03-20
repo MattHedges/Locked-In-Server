@@ -16,16 +16,14 @@ class ExerciseView(ViewSet):
 
     def create(self, request):
 
-        exercise = Exercise.objects.get(user=request.auth.user)
-        difficulty = Difficulty.objects.get(pk=request.data["description"])
-        muscleGroup = MuscleGroup.objects.get(pk=request.data["muscle"])
-        equipment = Equipment.objects.get(pk=request.data["name"])
+        difficulty = Difficulty.objects.get(pk=request.data["difficulty"])
+        muscleGroup = MuscleGroup.objects.get(pk=request.data["muscleGroup"])
+        equipment = Equipment.objects.get(pk=request.data["equipment"])
 
         exercise = Exercise.objects.create(
         name=request.data["name"],
         description=request.data["description"],
         difficulty=difficulty,
-        exercise=exercise,
         muscleGroup = muscleGroup,
         equipment = equipment,
         video = request.data["video"]
@@ -34,9 +32,9 @@ class ExerciseView(ViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def update(self, request, pk):
-        difficulty = Difficulty.objects.get(pk=request.data["description"])
-        muscleGroup = MuscleGroup.objects.get(pk=request.data["muscle"])
-        equipment = Equipment.objects.get(pk=request.data["name"])
+        difficulty = Difficulty.objects.get(pk=request.data["difficulty"])
+        muscleGroup = MuscleGroup.objects.get(pk=request.data["muscleGroup"])
+        equipment = Equipment.objects.get(pk=request.data["equipment"])
 
         exercise = Exercise.objects.get(pk=pk)
         exercise.name = request.data["name"]

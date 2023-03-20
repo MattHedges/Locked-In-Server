@@ -89,5 +89,13 @@
         "fields": {
             "muscle": "Lats"
         }
+    },
+    {
+        "model": "lockedinapi.musclegroup",
+        "pk": 14,
+        "fields": {
+            "muscle": "Lower Back"
+        }
     }
+
 ]
