@@ -49,8 +49,15 @@ class ExerciseView(ViewSet):
 
 
     def list(self, request):
-        exercise = Exercise.objects.all()
-        serializer = ExerciseSerializer(exercise, many=True)
+        query_params = request.query_params.dict()
+
+        if 'muscleGroup' in query_params:
+            exercises = exercises.filter(muscleGroup=query_params['muscleGroup'])
+        elif 'equipment' in query_params:
+            exercises = exercises.filter(equipment=query_params['equipment'])
+        else:
+            exercises = Exercise.objects.all()
+        serializer = ExerciseSerializer(exercises, many=True)
         return Response(serializer.data)
 
     def destroy(self, request, pk):

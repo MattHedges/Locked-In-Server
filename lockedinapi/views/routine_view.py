@@ -48,10 +48,16 @@ class RoutineView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
     def list(self, request):
-
-        routine = Routine.objects.all()
+        if "user" in request.query_params:
+            routine = Routine.objects.filter(user_id=request.query_params['user'])
+        elif "routineuser" and "routine" in request.query_params:
+            userRoutine = Routine.objects.filter(user_id=request.query_params['routineuser'])
+            routine = userRoutine.filter(name=request.query_params['routine'])
+        else:
+            routine = Routine.objects.all()
         serializer = RoutineSerializer(routine, many=True)
         return Response(serializer.data)
+
 
 
     def destroy(self, request, pk):
@@ -71,7 +77,7 @@ class ExerciseRoutineSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ExerciseRoutine
-        fields = ('exercise', )
+        fields = ('exercise', 'id',)
 
 
 class RoutineSerializer(serializers.ModelSerializer):

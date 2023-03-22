@@ -4,6 +4,8 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from lockedinapi.models import Goal, Exercise
 from rest_framework.decorators import action
+from django.contrib.auth.models import User
+
 
 
 class GoalView(ViewSet):
@@ -27,10 +29,12 @@ class GoalView(ViewSet):
 
     def update(self, request, pk):
 
+        user = User.objects.get(id=request.data["user"])
+
         goal = Goal.objects.get(pk=pk)
         goal.currentWeight = request.data["currentWeight"]
         goal.goalWeight = request.data["goalWeight"]
-        goal.user = request.auth.user,
+        goal.user = user
         goal.timeframe = request.data["timeframe"]
 
         goal.save()
@@ -39,7 +43,10 @@ class GoalView(ViewSet):
 
 
     def list(self, request):
-        goal = Goal.objects.all()
+        if "user" in request.query_params:
+            goal = Goal.objects.filter(user_id=request.query_params['user'])
+        else: 
+            goal = Goal.objects.all()
         serializer = GoalSerializer(goal, many=True)
         return Response(serializer.data)
 

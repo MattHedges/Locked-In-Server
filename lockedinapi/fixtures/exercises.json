@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "Barbell Squat",
-            "description": "1. Stand with your feet shoulder-width apart. Maintain the natural arch in your back, squeezing your shoulder blades and raising your chest. 2. Grip the bar across your shoulders and support it on your upper back. Unwrack the bar by straightening your legs, and take a step back. 3. Bend your knees as you lower the weight without altering the form of your back until your hips are below your knees. 4. Raise the bar back to starting position, lift with your legs and exhale at the top. ",
+            "description": "1. Stand with your feet shoulder-width apart. Maintain the natural arch in your back, squeezing your shoulder blades and raising your chest.  \n 2. Grip the bar across your shoulders and support it on your upper back. Unwrack the bar by straightening your legs, and take a step back. \n 3. Bend your knees as you lower the weight without altering the form of your back until your hips are below your knees. 4. Raise the bar back to starting position, lift with your legs and exhale at the top. ",
             "difficulty": 3,
             "muscleGroup": 8,
             "equipment": 2,
