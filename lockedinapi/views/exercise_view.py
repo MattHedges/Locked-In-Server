@@ -52,9 +52,9 @@ class ExerciseView(ViewSet):
         query_params = request.query_params.dict()
 
         if 'muscleGroup' in query_params:
-            exercises = exercises.filter(muscleGroup=query_params['muscleGroup'])
+            exercises = Exercise.objects.filter(muscleGroup=query_params['muscleGroup'])
         elif 'equipment' in query_params:
-            exercises = exercises.filter(equipment=query_params['equipment'])
+            exercises = Exercise.objects.filter(equipment=query_params['equipment'])
         else:
             exercises = Exercise.objects.all()
         serializer = ExerciseSerializer(exercises, many=True)
