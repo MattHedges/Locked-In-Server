@@ -40,7 +40,7 @@
         "pk": 4,
         "fields": {
             "name": "Barbell Bench Press",
-            "description": "Lay flat on the bench with your feet on the ground. With straight arms unrack the bar. 2. Lower the bar to your mid chest. 3. Raise the bar until you've locked your elbows.",
+            "description": "1. Lay flat on the bench with your feet on the ground. With straight arms unrack the bar. 2. Lower the bar to your mid chest. 3. Raise the bar until you've locked your elbows.",
             "difficulty": 2,
             "muscleGroup": 7,
             "equipment": 2,
