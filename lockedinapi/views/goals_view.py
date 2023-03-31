@@ -54,6 +54,8 @@ class GoalView(ViewSet):
         goal = Goal.objects.get(pk=pk)
         goal.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    # add a completed goals section that can retrieve all of a users previous goals
 
 class GoalSerializer(serializers.ModelSerializer):
     """JSON serializer for goal

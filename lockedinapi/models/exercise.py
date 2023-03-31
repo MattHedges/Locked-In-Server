@@ -10,3 +10,6 @@ class Exercise(models.Model):
     muscleGroup = models.ForeignKey("MuscleGroup", on_delete=models.CASCADE)
     equipment = models.ForeignKey("Equipment", on_delete=models.CASCADE)
     video = models.CharField(max_length=200, null=True)
+
+
+    # change the description to be steps instead of a long string in order to look asthetically pleasing 
