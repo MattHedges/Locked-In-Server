@@ -70,7 +70,7 @@ class ExerciseSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Exercise
-        fields = ('id', 'name', 'description', 'difficulty', 'muscleGroup', 'equipment', 'video', )
+        fields = ('id', 'name', 'description1', 'description2', 'description3', 'description4', 'difficulty', 'muscleGroup', 'equipment', 'video' )
 
 class ExerciseRoutineSerializer(serializers.ModelSerializer):
     exercise = ExerciseSerializer(many=False)

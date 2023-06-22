@@ -22,7 +22,10 @@ class ExerciseView(ViewSet):
 
         exercise = Exercise.objects.create(
         name=request.data["name"],
-        description=request.data["description"],
+        description1=request.data["description1"],
+        description2=request.data["description2"],
+        description3=request.data["description3"],
+        description4=request.data["description4"],
         difficulty=difficulty,
         muscleGroup = muscleGroup,
         equipment = equipment,
@@ -38,7 +41,10 @@ class ExerciseView(ViewSet):
 
         exercise = Exercise.objects.get(pk=pk)
         exercise.name = request.data["name"]
-        exercise.description = request.data["description"]
+        exercise.description1 = request.data["description1"]
+        exercise.description2 = request.data["description2"]
+        exercise.description3 = request.data["description3"]
+        exercise.description4 = request.data["description4"]
         difficulty = difficulty
         muscleGroup = muscleGroup
         equipment = equipment
@@ -70,5 +76,5 @@ class ExerciseSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Exercise
-        fields = ('id', 'name', 'description', 'difficulty', 'muscleGroup', 'equipment', 'video' )
+        fields = ('id', 'name', 'description1', 'description2', 'description3', 'description4', 'difficulty', 'muscleGroup', 'equipment', 'video' )
         depth = 1
