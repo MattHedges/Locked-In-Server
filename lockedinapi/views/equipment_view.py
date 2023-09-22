@@ -20,7 +20,7 @@ class EquipmentView(ViewSet):
         serializer = EquipmentSerializer(equipment, many=True)
         return Response(serializer.data)
 
-def destroy(self, request, pk):
+    def destroy(self, request, pk):
         equipment = Equipment.objects.get(pk=pk)
         equipment.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
